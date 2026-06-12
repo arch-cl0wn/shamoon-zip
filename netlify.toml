@@ -1,11 +1,8 @@
 [build]
-  command = "NITRO_PRESET=netlify bun run build"
-  publish = ".output/public"
-
-[build.environment]
-  NITRO_PRESET = "netlify"
+  command = "npm run build"
+  publish = "dist"
 
 [[redirects]]
   from = "/*"
-  to = "/.netlify/functions/server"
+  to = "/index.html"
   status = 200
